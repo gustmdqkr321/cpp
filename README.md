@@ -1,1 +1,3 @@
-# kookmin_cs_SH.park
+# kookmin_cs 2학년 1학기 c++
+# 매주 과제로 풀던 알고리즘
+# 스네이크 게임 프로젝트
