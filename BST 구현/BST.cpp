@@ -31,6 +31,9 @@ public:
     root = nullptr;
   }
   void inorderBST(Node* r){
+    if(root == nullptr){
+      cout << "NULL";
+    }
     if(r != nullptr){
       inorderBST(r->left);
       cout << r->Key << " ";
@@ -191,26 +194,18 @@ public:
 };
 int main() {
   BST n;
-  n.insertBST(25);
-  n.insertBST(9);
-  n.insertBST(37);
-  n.insertBST(45);
-  n.insertBST(56);
-  n.insertBST(18);
-  n.insertBST(4);
-  n.insertBST(40);
-  n.insertBST(38);
-  n.insertBST(55);
-  n.insertBST(39);
-  n.deleteBST(25);
-  n.deleteBST(37);
-  n.deleteBST(45);
-  n.deleteBST(38);
-  n.deleteBST(39);
-  n.deleteBST(40);
-  n.deleteBST(18);
-  n.inorderBST(n.root);
-  cout << endl;
+  int list[20] = {25, 500, 33, 49, 17, 403, 29, 105, 39, 66, 305, 44, 19, 441, 390, 12, 81, 50, 100, 999};
+  for(int i=0;i<20;i++){
+    n.insertBST(list[i]);
+    n.inorderBST(n.root);
+    cout << endl;
+  }
+  for(int i=0;i<20;i++){
+    n.deleteBST(list[i]);
+    n.inorderBST(n.root);
+    cout << endl;
+  }
+
 
   return 0;
 }
